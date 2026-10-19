@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08070d">
+<title>For Alekhya Pichidi — Our Little Cinema</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+:root{--bg:#08070d;--gold:#e8c88b;--cream:#f5eee5;--muted:#b9aeb8;--wine:#6c183a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 15% 10%,#45142c66,transparent 40%),radial-gradient(ellipse at 85% 60%,#17204455,transparent 42%),linear-gradient(180deg,#08070d,#100911 55%,#07070b)}
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55}
+nav{position:absolute;top:0;left:0;width:100%;padding:26px 7vw;display:flex;justify-content:space-between;align-items:center;z-index:5;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#e7d6c5}
+.brand{color:var(--gold);font-weight:700}.nav-note{opacity:.7}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:100px 24px 70px;position:relative;isolation:isolate}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#08070d33,#08070d00 45%,#08070d);z-index:-1}
+.orbit{width:min(76vw,480px);aspect-ratio:1;border:1px solid #e8c88b33;border-radius:50%;position:absolute;z-index:-1;box-shadow:0 0 90px #8c2d5930,inset 0 0 80px #8c2d5915;animation:float 8s ease-in-out infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #e8c88b25;border-radius:50%;inset:9%}.orbit:after{inset:19%}
+@keyframes float{50%{transform:scale(1.04) rotate(4deg);opacity:.7}}
+.kicker{font-size:10px;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;margin:0 0 22px}
+h1{font:500 clamp(54px,10vw,112px)/.88 'Cormorant Garamond',Georgia,serif;margin:0;letter-spacing:-.04em}
+h1 span{display:block;color:var(--gold);font-style:italic;font-weight:400}
+.hero-sub{max-width:520px;margin:28px auto 0;line-height:1.9;color:#d5c8ce;font-size:13px}
+.cta{display:inline-flex;margin-top:34px;padding:14px 24px;border:1px solid #e8c88b88;color:var(--gold);text-decoration:none;text-transform:uppercase;font-size:10px;letter-spacing:.23em;transition:.3s}
+.cta:hover{background:var(--gold);color:#120b12;box-shadow:0 0 30px #e8c88b33}
+.scroll{position:absolute;bottom:26px;letter-spacing:.3em;text-transform:uppercase;font-size:9px;color:#b5a4ad}
+.scroll:after{content:"";display:block;height:34px;width:1px;background:linear-gradient(var(--gold),transparent);margin:13px auto 0}
+.dasara{position:relative;z-index:1;max-width:850px;margin:0 auto 20px;padding:34px 25px;text-align:center;border-top:1px solid #e8c88b44;border-bottom:1px solid #e8c88b44;background:linear-gradient(120deg,#4a1a2c55,#8b5b1c1c,#4a1a2c44);box-shadow:0 0 55px #a86a2720}.dasara .festival{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#e8c88b}.dasara h2{font:500 clamp(38px,6vw,65px)/1 'Cormorant Garamond',Georgia,serif;color:#f7e8d1;margin:14px 0}.dasara h2 em{color:var(--gold)}.dasara p{max-width:650px;margin:0 auto;color:#e0cfd3;line-height:1.95;font-size:13px}.dasara .blessing{margin-top:17px;color:#e8c88b;font:italic 25px 'Cormorant Garamond',Georgia,serif}.intro{max-width:780px;margin:0 auto;padding:90px 25px 75px;text-align:center;position:relative;z-index:1}
+.eyebrow{color:var(--gold);font-size:9px;letter-spacing:.3em;text-transform:uppercase}
+.intro h2{font:500 clamp(36px,6vw,60px)/1.03 'Cormorant Garamond',Georgia,serif;margin:16px 0}
+.intro p{max-width:570px;margin:0 auto;color:var(--muted);line-height:1.9;font-size:13px}
+.reels{max-width:1200px;padding:0 22px 100px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;position:relative;z-index:1}
+.memory{border:1px solid #e8c88b25;background:linear-gradient(145deg,#ffffff08,#ffffff02);padding:12px;backdrop-filter:blur(8px);transition:transform .45s,border-color .45s;min-width:0}
+.memory:hover{transform:translateY(-6px);border-color:#e8c88b77}
+.clip-head{display:flex;align-items:center;justify-content:space-between;padding:5px 3px 12px;color:#bdaeb6;font-size:9px;letter-spacing:.2em}
+.live-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;box-shadow:0 0 10px var(--gold)}
+video{display:block;width:100%;max-height:560px;aspect-ratio:9/14;object-fit:contain;background:#050509;border:1px solid #ffffff0c}
+.caption{padding:18px 7px 12px}.caption .eyebrow{font-size:8px;margin:0 0 9px}
+.caption h3{font:500 28px/1 'Cormorant Garamond',Georgia,serif;margin:0 0 12px;color:#f5e6d4}
+.caption p:last-child{font-size:12px;line-height:1.85;color:#c9bac4;margin:0}
+.final{position:relative;text-align:center;padding:100px 24px 115px;border-top:1px solid #e8c88b22;background:linear-gradient(180deg,transparent,#220b1a66)}
+.final .heart{font-size:24px;color:var(--gold);text-shadow:0 0 25px #e8c88b66}
+.final h2{font:italic 500 clamp(40px,7vw,76px)/.95 'Cormorant Garamond',Georgia,serif;margin:20px 0;color:var(--gold)}
+.final p{color:#d0c0c8;line-height:1.9;font-size:13px;max-width:500px;margin:0 auto}
+.signature{font:italic 28px 'Cormorant Garamond',Georgia,serif;color:#f6e7d5;margin-top:24px}
+footer{padding:20px;text-align:center;color:#756773;font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.reels{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:0 14px 70px}.caption h3{font-size:25px}}
+@media(max-width:540px){nav{padding:20px 20px}.nav-note{font-size:8px}.reels{grid-template-columns:1fr;max-width:420px}.memory{padding:11px}.caption{padding:16px 5px 9px}video{max-height:620px;aspect-ratio:9/15}.intro{padding:70px 24px 55px}.hero-sub{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style></head>
+<body>
+<canvas id="stars"></canvas>
+<nav><div class="brand">A little forever ✦</div><div class="nav-note">A film for Alekhya</div></nav>
+<header class="hero">
+ <div class="orbit"></div>
+ <div><p class="kicker">A story written by my heart</p><h1>For my <span>Alekhya</span></h1>
+ <p class="hero-sub">Naa bangaram… ee website oka page kaadu. Naa manasulo neekosam daachukunna chinna chinna feelings ki oka cinematic home.</p>
+ <a class="cta" href="#our-film">Enter our little cinema&nbsp; ↓</a></div>
+ <div class="scroll">Scroll to feel</div>
+</header>
+<section class="dasara reveal">
+ <div class="festival">A festive wish · with all my love</div>
+ <h2>Happy <em>Dasara</em>,<br>my Alekhya Pichidi ✨</h2>
+ <p>Naa bangaram Alekhya… ee Dasara nee jeevitham lo santosham, manashanthi, manchi aarogyam, andamaina kalalu nindali. Nee navvu eppudu ilaane veluguthu undali; nee adugulu anni manchi daari lo munduku vellali. Chedu meeda manchi gelichinattu, nee life lo unna prathi badha ni dhairyam tho gelichi, nee kalalanni nijam chesukovali.</p>
+ <p style="margin-top:14px">Nuvvu naaku special ani cheppadaniki oka festival avasaram ledu… kaani ee Dasara roju, naa manasulo neeku unna place entha precious-o marosari cheppalanipinchindi. Nee navvu naaku oka pandaga, nee happiness naaku oka blessing, nee presence naa life lo oka beautiful feeling.</p>
+ <div class="blessing">Dasara Subhakankshalu, naa bangaram ❤️</div>
+</section>
+<section class="intro reveal" id="our-film"><p class="eyebrow">15 little reels · one big feeling</p><h2>Every reel has<br><em>a piece of my heart.</em></h2><p>Alekhya Pichidi, prathi video kinda unna maata naa heart nunchi vachindhi. Konni cute, konni emotional, konni mana love story laanti chinna cinema scenes.</p></section>
+<main class="reels">
+
+      <article class="memory reveal" style="--delay:90ms">
+        <div class="clip-head"><span>REEL 01</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip01.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>The First Frame</h3><p>Nuvvu naa pranam ani cheppadam kaadu Alekhya… naa prathi roju lo nuvve oka andamaina feeling.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:180ms">
+        <div class="clip-head"><span>REEL 02</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip02.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>A Little Forever</h3><p>Oka kiss chaalu ani kaadu bangaram… nee daggara dorike chinna chinna moments anni naaku precious.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:270ms">
+        <div class="clip-head"><span>REEL 03</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip03.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>Our Tiny Memories</h3><p>Manam kalisi create chese chinna memories kuda… naa heart lo lifetime cinema scenes la nilichipothayi.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:360ms">
+        <div class="clip-head"><span>REEL 04</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip04.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>My Favourite Person</h3><p>Ee lokam lo entha mandi unna, naa choopu malli malli vethikedhi maatram ninnu maathrame.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:0ms">
+        <div class="clip-head"><span>REEL 05</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip05.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>No Matter What</h3><p>Kopam aina, badha aina, silence aina… naa heart choose chesina person nuvve, Pichidi.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:90ms">
+        <div class="clip-head"><span>REEL 06</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip06.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>You, Always</h3><p>Evaraina em anukunna parledhu… naa manasuki nachina prema nuvve, naa bangaram.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:180ms">
+        <div class="clip-head"><span>REEL 07</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip07.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>A Quiet Kind of Love</h3><p>Nee pakkana unte chaalu… maatallo cheppaleni peace naa gundeki dorikindhi.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:270ms">
+        <div class="clip-head"><span>REEL 08</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip08.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>My Safe Place</h3><p>Road entha long aina, destination kanna important nee kosam unna feeling… naa manasulo nuvve.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:360ms">
+        <div class="clip-head"><span>REEL 09</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip09.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>Cute Chaos</h3><p>Mana love story lo konni scenes full comedy… kaani avi kuda naaku most favourite memories.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:0ms">
+        <div class="clip-head"><span>REEL 10</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip10.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>My Inner Child</h3><p>Nee mundhu nenu entha silly ga unna parledhu… endhukante nee daggare naa real self bayataki vasthundhi.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:90ms">
+        <div class="clip-head"><span>REEL 11</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip11.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>Eyes That Say It All</h3><p>Konni feelings ki words avasaram ledu… oka look chaalu, naa heart motham neeku ardham avuthundhi.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:180ms">
+        <div class="clip-head"><span>REEL 12</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip12.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>When You Say It</h3><p>Nuvvu chinna maata cheppina chaalu… naa serious face kuda automatic ga smile aipothundhi.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:270ms">
+        <div class="clip-head"><span>REEL 13</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip13.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>A Scene From Us</h3><p>Cinema lo love stories chustham… kaani naa favourite story ante, ninnu premisthunna naa story.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:360ms">
+        <div class="clip-head"><span>REEL 14</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip14.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>A Love That Cares</h3><p>Nee happiness, nee peace, nee dreams… ivanni naaku important. Prema ante care kuda bangaram.</p></div>
+      </article>
+
+      <article class="memory reveal" style="--delay:0ms">
+        <div class="clip-head"><span>REEL 15</span><span class="live-dot"></span></div>
+        <video controls playsinline preload="metadata" src="videos/clip15.mp4"></video>
+        <div class="caption"><p class="eyebrow">A NOTE FROM MY HEART</p><h3>Forever Teasing You</h3><p>Ninnu tease cheyyadam aapanu… endhukante nee cute reactions naa favourite habit, Alekhya Pichidi.</p></div>
+      </article>
+</main>
+<section class="final"><div class="heart">✦ ♥ ✦</div><h2>In every version<br>of my story, it's you.</h2><p>Ee roju, repu, enni rojulu vachina… ninnu premisthunna feeling ki end card undadhu. Nuvvu naa favourite person, naa bangaram, naa Alekhya Pichidi.</p><div class="signature">— Always, with love</div></section>
+<footer>Made with love · for Alekhya Pichidi</footer>
+<script>
+const c=document.getElementById('stars'),ctx=c.getContext('2d');let w,h,stars=[];
+function resize(){w=c.width=innerWidth*devicePixelRatio;h=c.height=innerHeight*devicePixelRatio;stars=Array.from({length:Math.min(130,Math.floor(innerWidth/7))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.2,a:Math.random()*.7+.15,s:Math.random()*.18+.03}));}
+function draw(){ctx.clearRect(0,0,w,h);for(const p of stars){p.a+=Math.sin(Date.now()*.0007+p.x)*.001;ctx.fillStyle=`rgba(232,200,139,${Math.max(.08,Math.min(.8,p.a))})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r*devicePixelRatio,0,Math.PI*2);ctx.fill();p.y-=p.s*devicePixelRatio;if(p.y<0)p.y=h;}requestAnimationFrame(draw)}
+resize();draw();addEventListener('resize',resize);
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>obs.observe(e));
+const vids=[...document.querySelectorAll('video')];const vo=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)e.target.pause()}),{threshold:.15});vids.forEach(v=>vo.observe(v));
+</script></body></html>
