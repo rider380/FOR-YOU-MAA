@@ -7,439 +7,89 @@
 <title>For My Pichidhi ❤️</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #09070d;
-    color: #fff;
-    font-family: Georgia, 'Times New Roman', serif;
-    overflow-x: hidden;
-}
-
-.hero {
-    min-height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    background:
-        radial-gradient(ellipse at top, #54203d 0%, #190d1d 45%, #09070d 80%);
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "♥";
-    position: absolute;
-    font-size: 300px;
-    color: rgba(255, 150, 190, 0.035);
-    animation: heartbeat 3s infinite;
-}
-
-.eyebrow {
-    color: #f6b5ce;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 11px Arial, sans-serif;
-    margin-bottom: 24px;
-}
-
-h1 {
-    font-size: clamp(42px, 9vw, 85px);
-    font-weight: normal;
-    line-height: 1.12;
-    background: linear-gradient(120deg, #fff, #ffb4d0, #fff0c9);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    position: relative;
-}
-
-.subtitle {
-    max-width: 600px;
-    color: #d7c4d0;
-    line-height: 1.9;
-    margin-top: 25px;
-    font-size: 16px;
-    position: relative;
-}
-
-.heart {
-    color: #ff7da9;
-    font-size: 30px;
-    margin-top: 28px;
-    animation: heartbeat 1.4s infinite;
-}
-
-.section-title {
-    text-align: center;
-    padding: 65px 20px 30px;
-}
-
-.section-title small {
-    color: #f5a8c7;
-    letter-spacing: 4px;
-    font: 11px Arial, sans-serif;
-    text-transform: uppercase;
-}
-
-.section-title h2 {
-    font-size: clamp(30px, 6vw, 48px);
-    font-weight: normal;
-    margin-top: 15px;
-}
-
-.section-title p {
-    color: #bbaab8;
-    margin-top: 14px;
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.gallery {
-    width: min(1150px, 92%);
-    margin: 0 auto;
-    padding: 20px 0 70px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: linear-gradient(145deg, #21131f, #110c13);
-    border: 1px solid rgba(255, 180, 210, 0.16);
-    border-radius: 18px;
-    overflow: hidden;
-    transition: transform .3s ease, border-color .3s ease;
-    box-shadow: 0 12px 35px rgba(0,0,0,.25);
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(255, 180, 210, .5);
-}
-
-.video-wrap {
-    background: #000;
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    overflow: hidden;
-}
-
-video {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: #000;
-}
-
-.caption {
-    padding: 20px 17px 23px;
-}
-
-.number {
-    color: #f3a5c5;
-    font: 10px Arial, sans-serif;
-    letter-spacing: 3px;
-}
-
-.caption h3 {
-    font-size: 21px;
-    font-weight: normal;
-    margin-top: 12px;
-    margin-bottom: 10px;
-    color: #ffe5ef;
-}
-
-.caption p {
-    font-size: 13px;
-    line-height: 1.9;
-    color: #c9b8c5;
-}
-
-.closing {
-    text-align: center;
-    padding: 75px 22px 85px;
-    background: radial-gradient(ellipse at bottom, #411a32, #09070d 70%);
-}
-
-.closing h2 {
-    font-size: clamp(32px, 7vw, 58px);
-    font-weight: normal;
-    color: #ffd6e5;
-    line-height: 1.3;
-}
-
-.closing p {
-    max-width: 620px;
-    margin: 25px auto 0;
-    color: #d3bdcc;
-    font-size: 15px;
-    line-height: 2;
-}
-
-.signature {
-    margin-top: 30px;
-    color: #f3a5c5;
-    font-size: 17px;
-    font-style: italic;
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
-    color: #8f7889;
-    font: 11px Arial, sans-serif;
-    letter-spacing: 2px;
-    border-top: 1px solid rgba(255,255,255,.07);
-}
-
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-}
-
-@media (max-width: 850px) {
-    .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
-    }
-}
-
-@media (max-width: 520px) {
-    .gallery {
-        grid-template-columns: 1fr;
-        width: 88%;
-        gap: 22px;
-    }
-
-    .hero {
-        min-height: 65vh;
-    }
-
-    .caption {
-        padding: 20px;
-    }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#09070d;color:#fff;font-family:Georgia,'Times New Roman',serif}
+.hero{text-align:center;padding:90px 20px;background:radial-gradient(ellipse at top,#632440,#09070d 75%)}
+.eyebrow{color:#f4a9c8;letter-spacing:4px;font:11px Arial,sans-serif}
+h1{font-size:clamp(45px,9vw,85px);font-weight:normal;margin:25px 0;color:#ffd6e5;line-height:1.1}
+.hero p{color:#d9c1d0;line-height:1.9;margin:20px auto;max-width:550px}
+.heart{font-size:32px;color:#ff83b1;margin-top:25px}
+.heading{text-align:center;padding:55px 15px 30px}
+.heading small{color:#f4a9c8;letter-spacing:3px;font:11px Arial,sans-serif}
+.heading h2{font-size:clamp(30px,6vw,46px);font-weight:normal;margin:15px 0}
+.heading p{color:#bcaab9;line-height:1.8}
+.gallery{max-width:1150px;width:92%;margin:auto;padding:20px 0 70px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:#171019;border:1px solid #48283c;border-radius:16px;overflow:hidden}
+.video-wrap{width:100%;aspect-ratio:9/16;background:#000}
+video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
+.caption{padding:20px}
+.num{color:#f4a9c8;font:11px Arial,sans-serif;letter-spacing:3px}
+h3{font-size:21px;font-weight:normal;color:#ffe0ec;margin:12px 0}
+.caption p{font-size:13px;line-height:1.9;color:#cbb9c8}
+.closing{text-align:center;padding:75px 20px;background:radial-gradient(ellipse at bottom,#482039,#09070d 75%)}
+.closing h2{font-size:clamp(35px,7vw,58px);font-weight:normal;color:#ffd6e5;line-height:1.35}
+.closing p{max-width:600px;margin:25px auto;color:#d7c3d0;line-height:2}
+footer{text-align:center;padding:22px;color:#957c8c;font:11px Arial,sans-serif;letter-spacing:2px}
+@media(max-width:800px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr;width:88%}.hero{padding:75px 18px}}
 </style>
 </head>
 
 <body>
 
 <header class="hero">
-    <div class="eyebrow">A little world made for you</div>
-
-    <h1>For My<br>Pichidhi ❤️</h1>
-
-    <p class="subtitle">
-        Some feelings are too beautiful for words.<br>
-        So I collected these little moments and made a world
-        that belongs only to you. ❤️
-    </p>
-
-    <div class="heart">♥</div>
+<div class="eyebrow">A LITTLE WORLD MADE FOR YOU</div>
+<h1>For My<br>Pichidhi ❤️</h1>
+<p>Some feelings are too beautiful for words. So I made this little world to share some special moments with you. ❤️</p>
+<div class="heart">♥</div>
 </header>
 
-<section class="section-title">
-    <small>15 Little Moments · One Big Feeling</small>
-    <h2>Our Little Universe</h2>
-    <p>Every reel has a feeling. Every feeling reminds me of you.</p>
+<section class="heading">
+<small>15 LITTLE MOMENTS · ONE BIG FEELING</small>
+<h2>Our Little Universe</h2>
+<p>Every video holds a moment. Every moment carries a feeling. ❤️</p>
 </section>
 
 <main class="gallery">
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.01.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 01</div>
-            <h3>My Favourite Feeling ❤️</h3>
-            <p>In a world full of people, somehow my heart found its favourite person in you.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.01.MP4"></video></div><div class="caption"><div class="num">MOMENT 01</div><h3>My Favourite Feeling ❤️</h3><p>In a world full of people, my heart has a special place for you.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.02.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 02</div>
-            <h3>My Little Madness 🥹</h3>
-            <p>You are the kind of madness I never want to recover from. You make ordinary moments special.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.02.MP4"></video></div><div class="caption"><div class="num">MOMENT 02</div><h3>My Little Madness 🥹</h3><p>You are the kind of madness that makes ordinary days feel special.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.03.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 03</div>
-            <h3>A Smile Like Yours ✨</h3>
-            <p>If happiness had a face, I think it would look a little like your beautiful smile.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.03.MP4"></video></div><div class="caption"><div class="num">MOMENT 03</div><h3>Your Beautiful Smile ✨</h3><p>Some smiles can make a whole day brighter. Yours is one of them.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.04.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 04</div>
-            <h3>My Favourite Person 💗</h3>
-            <p>It's not about finding someone perfect. It's about finding someone who feels special to your heart.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.04.MP4"></video></div><div class="caption"><div class="num">MOMENT 04</div><h3>A Special Place 💗</h3><p>Some people become precious to us in ways words cannot fully explain.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.05.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 05</div>
-            <h3>Just Like a Movie 🎬</h3>
-            <p>Some moments feel like cinema. Some people make life feel magical. You make my little world brighter.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.05.MP4"></video></div><div class="caption"><div class="num">MOMENT 05</div><h3>Like a Movie 🎬</h3><p>Some moments feel cinematic, especially when they remind me of you.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.06.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 06</div>
-            <h3>My Cute Trouble 😂❤️</h3>
-            <p>You can annoy me, make me laugh, and steal my attention without even trying. That's your magic!</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.06.MP4"></video></div><div class="caption"><div class="num">MOMENT 06</div><h3>My Cute Trouble 😂❤️</h3><p>A little laughter, a little craziness, and a whole lot of memories.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.07.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 07</div>
-            <h3>A Place in My Heart 🫶</h3>
-            <p>There are places you visit, and there are places you belong. You have a special place in my heart.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.07.MP4"></video></div><div class="caption"><div class="num">MOMENT 07</div><h3>Close to My Heart 🫶</h3><p>Some people stay in our thoughts even when they are not around.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.08.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 08</div>
-            <h3>Little Things, Big Feelings 🌷</h3>
-            <p>Sometimes the smallest things remind us of the biggest feelings. This little moment made me think of you.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.08.MP4"></video></div><div class="caption"><div class="num">MOMENT 08</div><h3>Little Things 🌷</h3><p>Sometimes the smallest moments carry the warmest feelings.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.09.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 09</div>
-            <h3>My Soft Corner 🩷</h3>
-            <p>No matter how busy life gets, some people remain close to our hearts. You are one of those people for me.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.09.MP4"></video></div><div class="caption"><div class="num">MOMENT 09</div><h3>A Soft Corner 🩷</h3><p>This little collection is a reminder of the beautiful feelings that matter.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.10.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 10</div>
-            <h3>My Favourite Smile 😊</h3>
-            <p>If this little video makes you smile, then it has already done something beautiful for me.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.10.MP4"></video></div><div class="caption"><div class="num">MOMENT 10</div><h3>Keep Smiling 😊</h3><p>If this video brings you a smile, then this moment is already special.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.11.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 11</div>
-            <h3>Beyond Words 💌</h3>
-            <p>Not every feeling needs a long explanation. Sometimes a small moment says everything the heart wants to say.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.11.MP4"></video></div><div class="caption"><div class="num">MOMENT 11</div><h3>Beyond Words 💌</h3><p>Some feelings are easier to share through little moments than long messages.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.12.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 12</div>
-            <h3>A Little Bit of Magic ✨</h3>
-            <p>Life is made of little moments. The beautiful ones deserve to be remembered a little longer.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.12.MP4"></video></div><div class="caption"><div class="num">MOMENT 12</div><h3>A Little Magic ✨</h3><p>Beautiful memories deserve a little corner where they can live on.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.13.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 13</div>
-            <h3>My Pichidhi 😂💗</h3>
-            <p>A little cute, a little crazy, and completely unforgettable. Some people are simply one of a kind.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.13.MP4"></video></div><div class="caption"><div class="num">MOMENT 13</div><h3>My Pichidhi 😂💗</h3><p>A little cute, a little crazy, and impossible to describe in just one sentence.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.14.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 14</div>
-            <h3>Keep This Smile 🌸</h3>
-            <p>Whenever you see this page, I hope it brings a smile to your face and a little warmth to your day.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.14.MP4"></video></div><div class="caption"><div class="num">MOMENT 14</div><h3>A Moment to Remember 🌸</h3><p>May this little page always bring a happy thought and a gentle smile.</p></div></article>
 
-    <article class="card">
-        <div class="video-wrap">
-            <video controls playsinline preload="metadata" src="CLIP.15.MP4"></video>
-        </div>
-        <div class="caption">
-            <div class="number">MOMENT 15</div>
-            <h3>One Last Little Feeling ❤️</h3>
-            <p>Out of all the little moments in this collection, I hope you remember this: you are special, and this page was made with care just for you.</p>
-        </div>
-    </article>
+<article class="card"><div class="video-wrap"><video controls playsinline preload="metadata" src="CLIP.15.MP4"></video></div><div class="caption"><div class="num">MOMENT 15</div><h3>Made Just for You ❤️</h3><p>Fifteen little moments, collected with care, to make this page feel special.</p></div></article>
 
 </main>
 
 <section class="closing">
-    <h2>For You,<br>My Pichidhi ❤️</h2>
-
-    <p>
-        This is not just a collection of videos.<br>
-        It is a little corner of the internet made to hold
-        some beautiful moments and feelings.<br><br>
-
-        Whenever you open this page, I hope it makes you smile.
-        That's the little magic I wanted to create for you. 💗
-    </p>
-
-    <div class="signature">Made with love ♥</div>
+<h2>For You,<br>My Pichidhi ❤️</h2>
+<p>This is a little world made to hold beautiful moments and feelings.<br>Whenever you visit this page, I hope it brings a smile to your face. 💗</p>
 </section>
 
-<footer>
-    A LITTLE WORLD OF FEELINGS · MADE WITH ❤️
-</footer>
+<footer>A LITTLE WORLD OF FEELINGS · MADE WITH ❤️</footer>
 
 </body>
 </html>
